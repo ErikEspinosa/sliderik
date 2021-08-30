@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sliderik! | Show any content in a fade slider</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/sliderik.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="hero">
+			<div class="hero-body has-text-centered">
+				<h1 class="title is-1">Sliderik!</h1>
+				<p class="subtitle">
+					Show any content in a fade slider. Pretty simple!
+				</p>
+				<a
+					href="https://github.com/ErikEspinosa"
+					target="_blank"
+					class="button is-primary mx-2"
+					>Github</a
+				>
+				<a
+					href="https://erikespinosar.com/"
+					target="_blank"
+					class="button is-link mx-2"
+					>Autor website</a
+				>
+			</div>
+		</header>
+
+		<main class="container">
+			<!-- Slider -->
+			<div id="slider">
+				<!-- Slide with direct image -->
+				<div class="sliderik__slide">
+					<img src="./assets/slide-1.jpg" alt="Slide 1" />
+
+					<div class="inner">
+						<div class="description">
+							<h2 class="is-size-4 has-text-weight-bold">
+								Add images directly
+							</h2>
+							<p>Fully responsive for all devices</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide with custom CSS class -->
+				<div class="sliderik__slide custom-background">
+					<div class="inner">
+						<div class="description">
+							<h2 class="is-size-4 has-text-weight-bold">
+								Add custom CSS classes
+							</h2>
+							<p>For background effects or gradients</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide with Youtube video -->
+				<div class="sliderik__slide">
+					<iframe
+						width="100%"
+						height="600px"
+						src="https://www.youtube.com/embed/3Tbxi38wXU0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+					<div class="inner">
+						<div class="description">
+							<h2 class="is-size-4 has-text-weight-bold">
+								Embed Youtube videos
+							</h2>
+							<p>No content restriction, add anything else</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- How to -->
+			<section class="section">
+				<h2 class="title">How to use</h2>
+				<p class="subtitle">
+					Follow the next steps to add Sliderik! into your project:
+				</p>
+				<div class="box">
+					<div class="content">
+						<h3>1. Get Sliderik!</h3>
+						<p>Download the repository from Github</p>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="content">
+						<h3>2. Copy files</h3>
+						<p>Locate the following files and copy in your project folder:</p>
+						<blockquote>
+							./styles/sliderik.css <br />
+							./src/sliderik.js
+						</blockquote>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="content">
+						<h3>3. Link to files</h3>
+						<p>Add the next code in your index.html file:</p>
+						<pre>
+							&lt;link rel="stylesheet" href="./styles/sliderik.css" /&gt;
+							&lt;script src="./src/sliderik.js"&gt;&lt;/script&gt;
+						</pre
+						>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="./src/main.js"></script>
+		<script src="./src/sliderik.js"></script>
+		<script>
+			const slider = new Sliderik({
+				container: "slider",
+				width: "100%",
+				height: "600px",
+				autoplay: false,
+				controls: true,
+			}).init();
+		</script>
+	</body>
+</html>

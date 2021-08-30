@@ -1,0 +1,64 @@
+// Breakpoints
+$mobile: 768px
+$tablet: 1024px
+$laptop: 1366px
+$desktop: 1920px
+
+// Colors
+$black: rgb(51, 51, 51)
+$white: rgb(255,255,255)
+
+// Slide
+.sliderik__slide
+    min-height: 100%
+    animation: fadeIn 1s ease-in-out
+    img
+        object-fit: cover
+        width: 100%
+        height: 100vh
+
+// Buttons
+.sliderik__button
+    position: absolute
+    top: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    background-color: rgba($white, 0.5)
+    color: #000000
+    font-size: 20px
+    font-weight: bolder
+    border-radius: 50%
+    cursor: pointer
+    transition: all 0.4s ease-in-out
+    -webkit-transition: all 0.4s ease-in-out
+    -moz-transition: all 0.4s ease-in-out
+    &:hover
+        background: $black
+        color: $white
+
+.sliderik__next
+    right: 10px
+.sliderik__prev
+    left: 10px
+
+// Animations
+@keyframes fadeIn
+    0%
+        opacity: 0.4
+    100%
+        opacity: 1
+
+@-moz-keyframes fadeIn
+    0%
+        opacity: 0.4
+    100%
+        opacity: 1
+
+@-webkit-keyframes fadeIn
+    0%
+        opacity: 0.4
+    100%
+        opacity: 1
